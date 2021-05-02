@@ -3,7 +3,7 @@ CREATE TABLE `vehicle_keys` (
   `identifier` varchar(22) NOT NULL,
   `plate` varchar(12) NOT NULL,
   `state` longtext,
-  `label` varchar(50) NOT NULL
+  `label` longtext
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 ALTER TABLE `vehicle_keys`
