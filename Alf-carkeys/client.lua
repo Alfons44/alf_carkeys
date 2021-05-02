@@ -103,12 +103,21 @@ function OpenKeysMenu()
         local elements = {}
 
         for k,key in ipairs(keys) do
-            table.insert(elements, {
-                label     = key.label.. " " ..key.plate.." - "..key.state,
-                plate     = key.plate,
-                state     = key.state,
-                id        = key.id
-            })
+            if key.label == nil then
+                table.insert(elements, {
+                    label     = key.plate.." - "..key.state,
+                    plate     = key.plate,
+                    state     = key.state,
+                    id        = key.id
+                })
+            else
+                table.insert(elements, {
+                    label     = key.label.. " " ..key.plate.." - "..key.state,
+                    plate     = key.plate,
+                    state     = key.state,
+                    id        = key.id
+                })
+            end
         end
 
         ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'CarKeys', {
@@ -1137,3 +1146,14 @@ function BoatControls()
         menu.close()
     end)
 end
+
+RegisterCommand("createkey", function()
+    local localVehId = GetVehiclePedIsIn(GetPlayerPed(-1), false)
+    local localVehPlate = GetVehicleNumberPlateText(localVehId)
+    ESX.TriggerServerCallback('Alf-Carkeys:checkIfKeyExist', function(exists)
+        if not exists then
+            TriggerServerEvent('Alf-Carkeys:createKey', localVehPlate)
+            TriggerEvent('esx:showNotification', 'Du hast einen Schlüssel für das Fahrzeug: '..localVehPlate.. ' erhalten') 
+        end
+    end, localVehPlate)
+end, false)
