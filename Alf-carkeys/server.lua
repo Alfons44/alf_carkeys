@@ -2,11 +2,10 @@ ESX               = nil
 TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 
 local engine = {}
-
 function getIdentifiant(id)
-    for _, v in ipairs(id) do
-        return v
-    end
+    local sourcePlayer = ESX.GetPlayerFromId(id)
+    local identifier = sourcePlayer.getIdentifier()
+    return identifier
 end
 
 RegisterServerEvent('Alf-Carkeys:createKey')
