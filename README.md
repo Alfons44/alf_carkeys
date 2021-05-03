@@ -1,4 +1,4 @@
-# Alf_carkeys || ESX Car System with Copy Key function!
+# Alf_carkeys || ESX Car System with Copy Key function! || Version with ESX SIMPLEGARAGES support
 
 ## Features
 ```
@@ -16,13 +16,15 @@
 ```
 » es_extended
 » mysql-async
+» esx_simplegarages
 ```
 
 ## Installation
 1. Import the SQL into your Database
 2. Configure the config like you want
-3. Add the ServerEvent ```TriggerServerEvent('Alf-Carkeys:createKey', VehiclePlate)``` to your Scripts to Create an Key
-4. Start the rescource
+3. Update the server/main.lua of esx_simplegarages with the version provided by me
+4. Add the ServerEvent ```TriggerServerEvent('Alf-Carkeys:createKey', VehiclePlate)``` to your scripts to create a key
+5. Start the rescource
 
 ## Config 
 Variable |  Description
