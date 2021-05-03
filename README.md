@@ -24,6 +24,8 @@
 3. Add the ServerEvent ```TriggerServerEvent('Alf-Carkeys:createKey', VehiclePlate)``` to your Scripts to Create an Key
 4. Start the rescource
 
+If you want Support for [esx_simpelgarages](https://github.com/arnevdaele/esx_simplegarages) use this fork from [Balou](https://github.com/derBalou/alf_carkeys_simplegarages)
+
 ## Config 
 Variable |  Description
 ------------- | -------------
