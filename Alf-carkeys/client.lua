@@ -75,7 +75,7 @@ local window3 = true
 local window4 = true
 
 
-RegisterNetEvent('Alf-Car:OpenKeysMenu')
+RegisterNetEvent('Alf-Carkeys:OpenKeysMenu')
 AddEventHandler('Alf-Carkeys:OpenKeysMenu', function()
     OpenKeysMenu()
 end)
