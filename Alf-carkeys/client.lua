@@ -174,7 +174,7 @@ function OpenKeysMenu()
                             for k,key in ipairs(keys) do
                                 if data.current.id and data.current.state == "Original" then 
                                     ESX.ShowNotification('Du kannst keinen ~r~Originalschlüssel ~s~wegwerfen')
-                                elseif key.state == "Kopie" then
+                                elseif key.state == "Kopie" or key.state == "Garagenzugriff" then
                                     TriggerServerEvent('Alf-Carkeys:deleteKey', data.current.plate, data.current.id)
                                     ESX.ShowNotification('Du hast den Fahrzeugschlüssel ~b~' .. data.current.plate.. ' ~r~weggeworfen') 
                                 end
