@@ -11,4 +11,7 @@ ALTER TABLE `vehicle_keys`
 
 ALTER TABLE `vehicle_keys`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  
+ALTER TABLE `vehicle_keys` CHANGE `identifier` `identifier` VARCHAR(41) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL; 
+
 COMMIT;
