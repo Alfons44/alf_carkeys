@@ -4,8 +4,7 @@ TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
 local engine = {}
 function getIdentifiant(id)
     local sourcePlayer = ESX.GetPlayerFromId(id)
-    local identifier = sourcePlayer.getIdentifier()
-    return identifier
+    return sourcePlayer.identifier
 end
 
 RegisterServerEvent('Alf-Carkeys:createKey')
