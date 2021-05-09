@@ -1,6 +1,6 @@
 CREATE TABLE `vehicle_keys` (
   `id` int(11) NOT NULL,
-  `identifier` varchar(22) NOT NULL,
+  `identifier` longtext NOT NULL,
   `plate` varchar(12) NOT NULL,
   `state` longtext,
   `label` longtext
