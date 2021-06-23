@@ -558,6 +558,10 @@ function DoorLock()
                     PlayVehicleDoorOpenSound(localVehId, 0)
     
                     TriggerEvent('esx:showNotification', _U('VehicleUnlocked'))
+		else 
+		    SetVehicleDoorsLocked(localVehId, 2)
+                    PlayVehicleDoorCloseSound(localVehId, 1)
+                    TriggerEvent('esx:showNotification', _U('VehicleLocked'))			
                 end
             else
                 ESX.TriggerServerCallback('Alf-Carkeys:checkIfPlayerHasKey', function(haskey)
@@ -573,6 +577,10 @@ function DoorLock()
                             PlayVehicleDoorOpenSound(localVehId, 0)
         
                             TriggerEvent('esx:showNotification', _U('VehicleUnlocked'))
+			else 
+			    SetVehicleDoorsLocked(localVehId, 2)
+			    PlayVehicleDoorCloseSound(localVehId, 1)
+			    TriggerEvent('esx:showNotification', _U('VehicleLocked'))	
                         end
                     else
                         TriggerEvent('esx:showNotification', _U('NoKeyForVehicle')) 
@@ -606,6 +614,10 @@ function DoorLock()
                     TaskPlayAnim(GetPlayerPed(-1), dict, "fob_click_fp", 8.0, 8.0, -1, 48, 1, false, false, false)
 
                     TriggerEvent('esx:showNotification', _U('VehicleUnlocked'))
+		else 
+		    SetVehicleDoorsLocked(localVehId, 2)
+                    PlayVehicleDoorCloseSound(localVehId, 1)
+                    TriggerEvent('esx:showNotification', _U('VehicleLocked'))	
                 end
             else
                 ESX.TriggerServerCallback('Alf-Carkeys:checkIfPlayerHasKey', function(haskey)
@@ -623,6 +635,10 @@ function DoorLock()
                             TaskPlayAnim(GetPlayerPed(-1), dict, "fob_click_fp", 8.0, 8.0, -1, 48, 1, false, false, false)
         
                             TriggerEvent('esx:showNotification', _U('VehicleUnlocked'))
+			else 
+			    SetVehicleDoorsLocked(localVehId, 2)
+			    PlayVehicleDoorCloseSound(localVehId, 1)
+			    TriggerEvent('esx:showNotification', _U('VehicleLocked'))	
                         end
                     else
                         TriggerEvent('esx:showNotification', _U('NoKeyForVehicle')) 
