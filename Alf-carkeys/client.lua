@@ -517,12 +517,12 @@ Citizen.CreateThread(function()
             end
 
             
-            if GetIsVehicleEngineRunning(GetVehiclePedIsIn(PlayerPedId())) ~= engine[vehicle] then
+            --if GetIsVehicleEngineRunning(GetVehiclePedIsIn(PlayerPedId())) ~= engine[vehicle] then
                 --print('current veh  '.. tostring(GetVehiclePedIsIn(PlayerPedId())))
                 --print('status ist nicht gleich  soll - ' .. tostring(engine[vehicle]) .. ' - ist - ' .. tostring(GetIsVehicleEngineRunning(GetVehiclePedIsIn(PlayerPedId()))) )
-                SetVehicleEngineOn(vehicle, engine[vehicle], true, true)
+              --  SetVehicleEngineOn(vehicle, engine[vehicle], true, true)
                 --print('test')
-            end
+           -- end
         end
     end
 end)
