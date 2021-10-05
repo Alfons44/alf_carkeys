@@ -27,7 +27,6 @@ end)
 
 RegisterServerEvent('Alf-Carkeys:createKeyForOther')
 AddEventHandler('Alf-Carkeys:createKeyForOther', function(plate, reciever)
-    local xPlayer = ESX.GetPlayerFromId(source)
     local reciever = ESX.GetPlayerFromId(reciever)
     MySQL.Async.execute("INSERT INTO `vehicle_keys` (`identifier`, `plate`, `state`) VALUES (@reciever,@plate,@state)", { 
         ['@reciever'] = reciever.identifier,
